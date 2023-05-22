@@ -1,0 +1,11 @@
+﻿  main.c
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\main.c(15,26): warning C4047: 'initializing': 'unsigned int' differs in levels of indirection from 'void *'
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\main.c(16,32): warning C4047: 'initializing': 'unsigned int' differs in levels of indirection from 'void *'
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\main.c(31,56): warning C4020: 'LoadTexture': too many actual parameters
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\main.c(59,61): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\main.c(59,78): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\main.c(70,59): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\main.c(70,81): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\main.c(85,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\main.c(86,21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  TargetPractice.vcxproj -> C:\Developer\Raylib\Projects\TargetPractice\x64\Debug\TargetPractice.exe
