@@ -12,10 +12,17 @@ typedef struct Enemy {
     Rectangle rect;
 }Enemy;
 
+typedef struct Animal
+{
+    Texture2D animalTexture[10];
+    Rectangle rect[10];
+}Animal;
+
 Texture2D enemyTexture = { NULL };
 Texture2D animalTextures[10] = { NULL };
 
 Enemy CreateAnEnemy();
+Animal CreateAnAnimals();
 
 int main(void)
 {
@@ -25,21 +32,24 @@ int main(void)
     SetTargetFPS(60);
     HideCursor();
     CrossHair cross = { 0 };
-    //Enemy enemy = { 0 };
+    
     cross.crossHairTex = LoadTexture("Resources/crosshair061.png");
     enemyTexture = LoadTexture("Resources/snake.png");
-    //Rectangle rect[10];
+    animalTextures[1] = LoadTexture("Resources/bear.png");
+    animalTextures[2] = LoadTexture("Resources/buffalo.png");
+    animalTextures[3] = LoadTexture("Resources/chick.png");
+    animalTextures[4] = LoadTexture("Resources/chicken.png");
+    animalTextures[5] = LoadTexture("Resources/cow.png");
+    animalTextures[6] = LoadTexture("Resources/crocodile.png");
+    animalTextures[7] = LoadTexture("Resources/dog.png");
+    animalTextures[8] = LoadTexture("Resources/duck.png");
+    animalTextures[9] = LoadTexture("Resources/elephant.png");
 
-   /* for (int i = 0; i < 10; i++)
-    {
-        Rectangle tempRect = { GetRandomValue(100, 700),GetRandomValue(100, 350), enemy.enemyTexture.width , enemy.enemyTexture.height };
-        rect[i] = tempRect;
-    }
-    enemy.rect = rect[1];*/
 
     Enemy enemy[10];
+    Animal animals = CreateAnAnimals();
 
-    for (int i = 0; i < 7; i++)
+    for (int i = 0; i < 10; i++)
     {
         enemy[i] = CreateAnEnemy();
     }
@@ -53,9 +63,10 @@ int main(void)
         cross.crossHairTex.height = 40;
         
         
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 10; i++)
         {
             DrawTexture(enemy[i].enemyTexture, enemy[i].rect.x, enemy[i].rect.y, WHITE);
+            DrawTexture(animals.animalTexture[i], animals.rect[i].x, animals.rect[i].y,WHITE);
         }
 
         for (int i = 0; i < 7; i++)
@@ -88,4 +99,19 @@ Enemy CreateAnEnemy() {
     enemy.enemyTexture.height = 40;
 
     return enemy;
+}
+
+Animal CreateAnAnimals() {
+    Animal animals;
+    for (int i = 0; i < 10; i++)
+    {
+        animals.animalTexture[i] = animalTextures[i];
+        animals.animalTexture[i].width = 40;
+        animals.animalTexture[i].height = 40;
+        animals.rect[i].x = GetRandomValue(0, 700);
+        animals.rect[i].y = GetRandomValue(0, 400);
+    }
+
+    return animals;
+   
 }
