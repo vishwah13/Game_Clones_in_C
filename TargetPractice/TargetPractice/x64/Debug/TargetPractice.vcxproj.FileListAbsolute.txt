@@ -1,0 +1,1 @@
+C:\Developer\Raylib\Projects\TargetPractice\TargetPractice\x64\Debug\TargetPractice.vcxproj.CopyComplete
